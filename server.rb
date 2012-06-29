@@ -7,3 +7,7 @@ get '/' do
   erb :index
 end
 
+get '/url?=:url' do
+  Gist.fetch(url)
+end
+
